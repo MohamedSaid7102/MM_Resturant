@@ -1,0 +1,141 @@
+/* General styel*/
+:root {
+    --clr-gray-light: #d7dfe2;
+    --clr-gray-med: #616b74 ;
+    --clr-gray-dark: #414b56 ;
+    --clr-link: #4d97b2;
+    --clr-popular: #ef257a ;
+    --clr-development: #e85808;
+    --clr-technology: #654fff ;
+}
+
+*{
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 2rem;
+    color: var(--clr--gray--dark);
+}
+
+.wrapper{
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    overflow: hidden;
+    box-shadow: 0px 2px 20px var(--clr-gray-light);
+    background-color: white;
+    border-radius: 0.5rem;
+    position: relative;/* because we want other elemtns inside the card to be absolute*/
+    width: 350px;
+    margin: 2rem;
+    transition: 250ms all ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 2px 20px var(--clr-gray-med);
+    cursor: pointer;
+}
+
+.banner-img{
+    position: absolute; /* So that it will be relative to the parent*/
+    filter: blur(1px);
+    object-fit: cover;
+    height: 14rem;
+    width: 100%;
+    transition: 250ms all ease-in-out;
+}
+
+#horizontalLine{
+    width: 87%;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    height: 1px;
+    background-color: #CCC; /* Modern Browsers */
+    box-shadow: 0px 0px 5px var(--clr-gray-light);
+}
+
+.banner-img:hover{
+    filter: blur(0px);
+}
+
+.category-tag{
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 1.3rem 0.5rem 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    z-index: 1; /* to bring it to the front*/
+    top: 1.4rem;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0px 0px 25px var(--clr-gray-dark);
+}
+
+.development{
+    background-color: var(--clr-development);
+}
+.technology{
+    background-color: var(--clr-technology);
+}
+.popular{
+    background-color: var(--clr-popular);
+}
+
+.card-body{
+    margin: 14.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.blog-hashtag{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--clr-link);
+}
+
+.blog-title{
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    margin: 1rem 0 1rem 0;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.blog-description {
+    color: var(--clr-gray-med);
+}
+.profile-name{
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Martel', serif;
+    font-weight: bolder;
+    font-size: 110%;
+
+}
+.card-profile {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}   
+
+.profile-img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;/* to make it round */
+    margin-right: 10px;
+    box-shadow: 0px 0px 3px black;
+}
+
+.profile-followers{
+    font-size: 90%;
+    color: var(--clr-gray-med);
+    margin-top: 3px;
+}

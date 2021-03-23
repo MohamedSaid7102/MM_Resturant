@@ -1,0 +1,158 @@
+
+
+/* Importing new fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+
+/* end of importing */
+/* Styling radio buttons */
+.table-form-container{
+    margin: 7% auto;
+    display: table;
+    min-width: 500px;
+}
+/* The container */
+.container {
+    display: table;
+    position: relative;
+    top: -2.5px;
+    padding-left: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+    font-size: 12px;
+    /* this to disable user from selecting the radio button */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color and make border none */
+   /* I used ~ to indecate that i want to modify all siblings with .checkmark class after an input with type radio */
+ /* and i removed the border so that it looks better */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+    border: none;    
+    transition: 180ms all ease-in-out;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    border: none;
+    box-shadow: 0px 0px 3px #999;
+    transform: scale(1.15);
+  }
+/*spesify a color for each radio button*/
+/* Start */
+  td:nth-child(2) .container input:checked ~ .checkmark { /* Very unsatisfied */
+    background-color: rgb(236, 12, 12);
+  }
+  td:nth-child(3) .container input:checked ~ .checkmark { /* Unsatisfied */
+    background-color: #C159FA;
+  }
+  td:nth-child(4) .container input:checked ~ .checkmark { /* Neutral */
+    background-color: #63c3d4;
+  }
+  td:nth-child(5) .container input:checked ~ .checkmark { /* Satisfied */
+    background-color: #93DBC0;
+  }
+  td:nth-child(6) .container input:checked ~ .checkmark { /* Very satisfied */
+    background-color: #2DDB22;
+  }
+
+  /* end */
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      top: 32%;
+      left: 33%;
+      width: 35%;
+      height: 35%;
+      border-radius: 50%;
+      border: none;
+      background: white;
+  }
+
+/* end of styling radio buttons */
+
+th, td{
+    border: 1px solid #cbd0dd;
+    padding: 13px;
+    text-align: center;
+}
+th {
+    background-color: #e5eaf4;
+}
+
+.no-border{border: none; background-color: transparent;}
+
+/*For the Overall satisfaction*/
+table tr:first-child th:nth-child(1) {
+    border-top-left-radius: 10px;
+}
+/*For the Prices*/
+table tr:last-child th:nth-child(1) {
+    border-bottom-left-radius: 10px;
+}
+/*last bottom right cell */
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+/*Very unsatisfied*/
+table tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+/*Very satisfied*/
+table tr:first-child th:nth-child(2) {
+    border-top-left-radius: 10px;
+}
+
+
+.table-fieldset{
+    border: 1px solid #999;  
+    border-radius: 20px;
+    float:left;
+    padding: 15px;
+    box-shadow: 0px 0px 15px #eee;
+}
+
+legend{
+    margin: 15px;
+    margin-left: 20px;
+    padding: 10px 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 130%;
+    letter-spacing: 1px;
+    border: 0.5px solid #eee;
+    border-radius: 30px;
+}

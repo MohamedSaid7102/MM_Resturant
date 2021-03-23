@@ -1,0 +1,315 @@
+/* Importing new fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap");
+
+/* end of importing */
+/*.back {
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  top: 0;
+  left: 0;  
+  height: 100%;
+  width: 100%;
+  filter: blur(3px);
+}*/
+h1 {
+  color: rgb(59, 59, 59);
+  text-align: center;
+  font-size: 300%;
+  font-weight: 550;
+  margin-bottom: -30px;
+  margin-top: 81px;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  word-spacing: 0.6rem;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Styling radio buttons */
+.table-form-container {
+  margin: 7% auto;
+  display: table;
+  min-width: 500px;
+}
+/* The container */
+.container {
+  display: table;
+  position: relative;
+  top: -2.5px;
+  padding-left: 25px;
+  margin: 5px auto;
+  cursor: pointer;
+  font-size: 12px;
+  /* this to disable user from selecting the radio button */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  border: 0;
+}
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+  border: 0;
+}
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  height: 25px;
+  width: 25px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color and make border none */
+/* I used ~ to indecate that i want to modify all siblings with .checkmark class after an input with type radio */
+/* and i removed the border so that it looks better */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+  border: none;
+  transition: 180ms all ease-in-out;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  border: none;
+  box-shadow: 0px 0px 3px #999;
+  transform: scale(1.15);
+}
+/*spesify a color for each radio button*/
+/* Start */
+td:nth-child(2) .container input:checked ~ .checkmark {
+  /* Very unsatisfied */
+  background-color: rgb(236, 12, 12);
+}
+td:nth-child(3) .container input:checked ~ .checkmark {
+  /* Unsatisfied */
+  background-color: #c159fa;
+}
+td:nth-child(4) .container input:checked ~ .checkmark {
+  /* Neutral */
+  background-color: #63c3d4;
+}
+td:nth-child(5) .container input:checked ~ .checkmark {
+  /* Satisfied */
+  background-color: #93dbc0;
+}
+td:nth-child(6) .container input:checked ~ .checkmark {
+  /* Very satisfied */
+  background-color: #2ddb22;
+}
+
+/* end */
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 32%;
+  left: 33%;
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  border: none;
+  background: white;
+}
+
+/* end of styling radio buttons */
+
+th,
+td {
+  border: 1px solid #cbd0dd;
+  padding: 13px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 450;
+  text-shadow: rgba(0, 0, 0, 0.432);
+}
+th {
+  background-color: #0d6dfdde;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #eef7ff;
+}
+.no-border {
+  border: none;
+  background-color: transparent;
+}
+
+/*For the Overall satisfaction*/
+table tr:first-child th:nth-child(1) {
+  border-top-left-radius: 10px;
+}
+/*For the Prices*/
+table tr:last-child th:nth-child(1) {
+  border-bottom-left-radius: 10px;
+}
+/*last bottom right cell */
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+/*Very unsatisfied*/
+table tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+/*Very satisfied*/
+table tr:first-child th:nth-child(2) {
+  border-top-left-radius: 10px;
+}
+
+.table-fieldset {
+  border: none;
+  border-radius: 20px;
+  float: left;
+  padding: 15px;
+  box-shadow: 0px 0px 15px #eee;
+  background-color: #fff;
+}
+
+legend {
+  background-color: #f5f5f5;
+  color: #333;
+  border: none;
+  margin: 15px;
+  margin-left: 20px;
+  padding: 10px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 150%;
+  letter-spacing: 1px;
+  border-radius: 30px;
+}
+
+.personal-info-feildset {
+  border-radius: 15px;
+  margin: -58px 17%;
+  padding: 25px;
+  width: 60%;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px #eee;
+  border: none;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 179%;
+  font-family: "Raleway", sans-serif;
+}
+
+/* form */
+
+form {
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+  margin-bottom: 4%;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem;
+  padding: 0.25rem;
+  color: white;
+}
+
+.form-control {
+  display: block;
+  width: 95%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box; /*to make background extend withen border*/
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 95%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.text-area {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 179%;
+  font-family: "Raleway", sans-serif;
+}
+
+.submit-button {
+  display: block;
+  padding: 17px 25px;
+  background: rgba(91, 138, 182, 0.692);
+  color: inherit;
+  border-radius: 79px;
+  border: none;
+  margin: auto;
+  cursor: pointer;
+  font-size: 100%;
+  letter-spacing: 2px;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  transition: 200ms all ease-in-out;
+}
+
+.submit-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgb(197, 197, 197);
+  background: rgba(113, 186, 255, 0.856);
+}

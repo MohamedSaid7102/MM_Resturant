@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+body {
+  background-image: url("photos/B6.jpg");
+  background-size: 100%;
+  object-fit: cover;
+  left: 20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black;
+  background-position: center;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    background-size: inherit;
+  }
+}
+
+.heading {
+  text-align: center;
+  margin: 30px;
+  color: white;
+  font-size: 450%;
+  text-shadow: 0px 0px 5px rgb(104, 104, 104);
+  font-family: "Playfair Display", serif;
+}
+/* to style the underline line */
+.underline {
+  width: 20%;
+  margin: auto;
+}
+
+/* start of style the star review */
+.checked {
+  color: orange;
+}
+.star-review {
+  /* to disable user from selecting */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* end of style the star review */
+
+/* Social media styling */
+/*
+.facebook, .twitter, .youtube{
+    border: 1px solid gray;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    font-weight: 900;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    background-color:#898F9C;
+    transition: 200ms all ease-in-out;
+}
+.facebook:hover{
+    color: white;
+    background-color:#4267B2 ;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px gray;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+}
+.twitter:hover{
+    color: white;
+    background-color:#1DA1F2 ;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px gray;
+    border: none;
+}
+.youtube:hover{
+    color: white;
+    background-color:#FF0000 ;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 3px gray;
+    border: none;
+}
+*/
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* the wrapping card */
+.card {
+  margin: 15px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgb(202, 202, 202);
+  overflow: hidden;
+  width: 400px;
+  height: 650px;
+  transition: 250ms all ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px rgb(128, 128, 128);
+  background-color: rgba(255, 255, 255, 0.192);
+}
+/* start of card banner editing */
+.card-banner {
+  position: relative;
+}
+
+.background-img {
+  position: absolute;
+  object-fit: cover;
+  height: 17rem;
+  width: 100%;
+  filter: blur(2.3px);
+  /* to make imge unselected */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.chef-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 48px;
+  left: 30%;
+  z-index: 1;
+  box-shadow: 0px 0px 10px #eee;
+  /* to make imge unselected */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.chef-name {
+  color: white;
+  z-index: 1;
+  position: absolute;
+  top: 209px;
+  left: 28%;
+  font-size: 150%;
+  font-family: "Old Standard TT", serif;
+}
+
+/*end  of card banner editing */
+
+/* Chef info styling */
+
+.chef-info {
+  position: relative;
+  top: 19rem;
+  padding: 10px;
+  text-align: center;
+  font-size: 133%;
+}
+
+.star-review {
+  transform: scale(1.8);
+  margin-bottom: 33px;
+  box-shadow: 0px 0px 5px rgba(179, 179, 179, 0.795);
+}
+
+.underline {
+  height: 0.4;
+  width: 26%;
+  margin-bottom: 15px;
+}
+
+.describtion {
+  quotes: "\201c""\201d";
+  margin-top: -20px;
+  margin-bottom: -47px;
+}
+
+.describtion:before {
+  content: open-quote;
+  font-size: 300%;
+  display: block;
+  position: relative;
+  left: -153px;
+  margin-bottom: -33px;
+  margin-top: 13px;
+  color: rgb(93, 236, 229);
+  transform: scale(1.6);
+}
+.describtion:after {
+  content: close-quote;
+  font-size: 300%;
+  display: block;
+  position: relative;
+  right: -146px;
+  margin-top: 14px;
+  color: rgb(93, 236, 229);
+  transform: scale(1.6);
+}
+/* end of chef info */
+
+/* footer styling */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  background-color: rgba(143, 143, 143, 0.404);
+  border-radius: 10px;
+  color: white;
+}

@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.MainPage-background {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("imgs/background.jpg");
+  background-color: #222;
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.Main-page-navigation-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 40px 120px;
+}
+
+@media screen and (max-width: 768px) {
+  .Main-page-navigation-bar {
+    flex-direction: column;
+  }
+}
+
+.nav-logo img {
+  width: 110px;
+}
+
+.nav-links {
+  flex: 1;
+  /*
+        flex 1 is equal to flex: 1 1 0 
+        flex-grow : 1;    ➜ The div will grow in same proportion as the window-size       
+        flex-shrink : 1;  ➜ The div will shrink in same proportion as the window-size 
+        flex-basis : 0;   ➜ The div does not have a starting value as such and will 
+                            take up screen as per the screen size available for
+                            e.g:- if 3 divs are in the wrapper then each div will take 33%.
+    */
+  margin-top: 25px;
+}
+
+.nav-links ul {
+  margin-left: 50px;
+  display: inline;
+  cursor: pointer;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px 25px;
+}
+
+.nav-links ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "Playfair Display", serif;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 1.5px;
+  background: yellow;
+  display: block;
+  margin: 5px auto;
+  border-radius: 10px;
+  transition: 250ms all cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.nav-links ul li:hover::after {
+  width: 90%;
+  text-shadow: 0px 2px 5px #555;
+}
+a:hover,
+a:active,
+a:focus {
+  outline: none;
+  border: 0;
+}
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+  border: 0;
+}
+
+.nav-links .sign-in {
+  padding: 13px 27px;
+  border-radius: 100px;
+  border: none;
+  background-color: #ccc;
+  float: right;
+  transform: scale(1.2);
+  font-family: "Jura", sans-serif;
+  font-weight: 900;
+  font-size: 102%;
+  cursor: pointer;
+  color: #555;
+  transition: 200ms all cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.nav-links .sign-in:hover {
+  background-color: rgba(250, 250, 0, 0.815);
+  color: white;
+  box-shadow: 0px 0px 15px rgba(110, 110, 110, 0.5);
+}
+
+.clear-float {
+  clear: both;
+}
+
+.banner-title h1 {
+  margin: 50px 167px;
+  color: white;
+  font-size: 445%;
+  line-height: 145px;
+  font-family: "Cardo", serif;
+  text-shadow: 0px 0px 34px #070707ab;
+}
+
+.banner-title h1 span {
+  color: rgba(255, 255, 0, 0.856);
+  line-height: 116px;
+  font-family: "Cardo", serif;
+  font-size: 116%;
+}
+
+.main-page-footer {
+  z-index: 1;
+  color: white;
+  position: fixed;
+  bottom: 5px;
+  margin-left: 34%;
+  padding: 7px 20px;
+  background-color: rgba(65, 65, 65, 0.25);
+  border-radius: 20px;
+}
+
+.virtecal-bar {
+  height: 100%;
+  background: #222;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.virtecal-bar .social-media-icon {
+  width: 85px;
+  height: 512px;
+  background: yellow;
+  text-align: center;
+  padding-top: 26%;
+  padding-bottom: 20%;
+  position: relative;
+  margin-top: 147%;
+  border-radius: 6px;
+}
+
+.virtecal-bar .social-media-icon div {
+  height: 25%;
+  margin-top: -27px;
+}
+.virtecal-bar .social-media-icon .fa {
+  display: block;
+  padding: 17px 18px;
+  margin: 38px 16px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 50%;
+  transition: 250ms all ease-in-out;
+}
+
+.virtecal-bar .social-media-icon .fa:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px rgb(97, 97, 97);
+  border: none;
+  font-size: 120%;
+}
+
+.virtecal-bar .social-media-icon .fa-facebook:hover {
+  color: white;
+  background: #4267b2;
+}
+
+.virtecal-bar .social-media-icon .fa-instagram:hover {
+  color: white;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+}
+
+.virtecal-bar .social-media-icon .fa-twitter:hover {
+  color: #00acee;
+  background: white;
+}
+
+.virtecal-bar .social-media-icon .fa-pinterest:hover {
+  color: #e60023;
+  background: white;
+}
